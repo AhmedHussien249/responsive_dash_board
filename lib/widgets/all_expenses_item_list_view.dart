@@ -46,16 +46,19 @@ class _AllExpensesItemListViewState extends State<AllExpensesItemListView> {
         var item = e.value;
         if (index == 1) {
           return Expanded(
-              child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 12),
             child: GestureDetector(
               onTap: () {
                 updateIndex(index);
               },
-              child: AllExpensessItem(
-                  itemModel: item, isSelected: selectedIndex == index),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 12),
+                child: AllExpensessItem(
+                  itemModel: item,
+                  isSelected: selectedIndex == index,
+                ),
+              ),
             ),
-          ));
+          );
         } else {
           return Expanded(
               child: GestureDetector(

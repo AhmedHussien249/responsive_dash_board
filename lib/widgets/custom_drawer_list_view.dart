@@ -42,7 +42,9 @@ class _CustomDrawerListViewState extends State<CustomDrawerListView> {
           child: Padding(
             padding: const EdgeInsets.only(top: 20),
             child: DrawerItem(
-                drawerItem: items[index], isActive: currentIndex == index),
+              drawerItem: items[index],
+              isActive: currentIndex == index,
+            ),
           ),
         );
       },
